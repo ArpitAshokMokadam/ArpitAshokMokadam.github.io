@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<style>
+    .icon {
+        color: aquamarine;
+        width: 24px;
+        height: 24px;
+    }
+</style>
+</head>
+
+<body>
+    <button id="btn">click here</button><br>
+    <ion-icon class="icon" name="airplane-outline"></ion-icon>
+    <p id="mypara">this is a para</p>
+   
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                //  $("#mypara").css("background-color","red"); // for single change
+                $("#mypara").css({ "background-color": "green", "color": "white", "padding": "15px" }); //for multiple changes
+                $(this).css("background-color", "aqua"); //css for button
+            })
+        })
+    </script>
+</body>
+
+</html>

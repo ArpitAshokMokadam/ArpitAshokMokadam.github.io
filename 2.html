@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click here</button>
+    <p id="mypara">this is a paragraph</p>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <p id="result"></p>
+    <button id="add">Add</button>
+    <button id="sub">Subtract</button>
+    <button id="multi">Multiply</button>
+    <button id="divide">Divide</button>
+    <input type="text" id="num3">
+    
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                alert("you clicked button");
+                $("#mypara").html("now it is jquery");
+            });
+            $("#add").click(function(){
+                let x = parseInt($("#num1").val()); //values get
+                let y = parseInt($("#num2").val()); //value get val() blank
+                let z = x + y;
+                $("#result").html("Addition is " +z); //values set
+                $("#num3").val("Addition is " +z);  //values set val() filled
+            });
+            $("#sub").click(function(){
+                let x = parseInt($("#num1").val());
+                let y = parseInt($("#num2").val());
+                let z = x - y;
+                $("#result").html("Subtraction is " +z);
+            });
+            $("#multi").click(function(){
+                let x = parseInt($("#num1").val());
+                let y = parseInt($("#num2").val());
+                let z = x * y;
+                $("#result").html("multiplication is " +z);
+            });
+            $("#divide").click(function(){
+                let x = parseInt($("#num1").val());
+                let y = parseInt($("#num2").val());
+                let z = x / y;
+                $("#result").html("division is " +z);
+            });
+        });
+    </script>
+</body>
+</html>
